@@ -4554,7 +4554,7 @@ func TestServer_RecordReplayQuery(t *testing.T) {
 		{
 			ID:      "test-batch",
 			Message: "test-batch got: 3",
-			Time:    time.Date(1971, 1, 1, 0, 0, 3, 0, time.UTC),
+			Time:    time.Date(1971, 1, 1, 0, 0, 3, 0, time.UTC).Local(),
 			Level:   "CRITICAL",
 			Data: query.Result{
 				Series: imodels.Rows{
@@ -4578,7 +4578,7 @@ func TestServer_RecordReplayQuery(t *testing.T) {
 		{
 			ID:      "test-batch",
 			Message: "test-batch got: 4",
-			Time:    time.Date(1971, 1, 1, 0, 0, 4, 0, time.UTC),
+			Time:    time.Date(1971, 1, 1, 0, 0, 4, 0, time.UTC).Local(),
 			Level:   "CRITICAL",
 			Data: query.Result{
 				Series: imodels.Rows{
@@ -4834,7 +4834,7 @@ func TestServer_ReplayQuery(t *testing.T) {
 		{
 			ID:      "test-batch",
 			Message: "test-batch got: 3",
-			Time:    time.Date(1971, 1, 1, 0, 0, 3, 0, time.UTC),
+			Time:    time.Date(1971, 1, 1, 0, 0, 3, 0, time.UTC).Local(),
 			Level:   "CRITICAL",
 			Data: query.Result{
 				Series: imodels.Rows{
@@ -4858,7 +4858,7 @@ func TestServer_ReplayQuery(t *testing.T) {
 		{
 			ID:      "test-batch",
 			Message: "test-batch got: 4",
-			Time:    time.Date(1971, 1, 1, 0, 0, 4, 0, time.UTC),
+			Time:    time.Date(1971, 1, 1, 0, 0, 4, 0, time.UTC).Local(),
 			Level:   "CRITICAL",
 			Data: query.Result{
 				Series: imodels.Rows{
@@ -5151,7 +5151,7 @@ func TestServer_RecordReplayQuery_Missing(t *testing.T) {
 		{
 			ID:            "test-stream-query",
 			Message:       "test-stream-query is CRITICAL",
-			Time:          time.Date(1971, 1, 1, 0, 0, 1, 0, time.UTC),
+			Time:          time.Date(1971, 1, 1, 0, 0, 1, 0, time.UTC).Local(),
 			Level:         alert.Critical,
 			PreviousLevel: alert.OK,
 			Duration:      0 * time.Second,
@@ -5174,7 +5174,7 @@ func TestServer_RecordReplayQuery_Missing(t *testing.T) {
 		{
 			ID:            "test-stream-query",
 			Message:       "test-stream-query is CRITICAL",
-			Time:          time.Date(1971, 1, 1, 0, 0, 2, 0, time.UTC),
+			Time:          time.Date(1971, 1, 1, 0, 0, 2, 0, time.UTC).Local(),
 			Level:         alert.Critical,
 			PreviousLevel: alert.Critical,
 			Duration:      1 * time.Second,
@@ -5197,7 +5197,7 @@ func TestServer_RecordReplayQuery_Missing(t *testing.T) {
 		{
 			ID:            "test-stream-query",
 			Message:       "test-stream-query is CRITICAL",
-			Time:          time.Date(1971, 1, 1, 0, 0, 3, 0, time.UTC),
+			Time:          time.Date(1971, 1, 1, 0, 0, 3, 0, time.UTC).Local(),
 			Level:         alert.Critical,
 			PreviousLevel: alert.Critical,
 			Duration:      2 * time.Second,
@@ -5222,7 +5222,7 @@ func TestServer_RecordReplayQuery_Missing(t *testing.T) {
 		{
 			ID:            "test-stream-query",
 			Message:       "test-stream-query is CRITICAL",
-			Time:          time.Date(1971, 1, 1, 0, 0, 4, 0, time.UTC),
+			Time:          time.Date(1971, 1, 1, 0, 0, 4, 0, time.UTC).Local(),
 			Level:         alert.Critical,
 			PreviousLevel: alert.Critical,
 			Duration:      3 * time.Second,
@@ -5247,7 +5247,7 @@ func TestServer_RecordReplayQuery_Missing(t *testing.T) {
 		{
 			ID:            "test-stream-query",
 			Message:       "test-stream-query is CRITICAL",
-			Time:          time.Date(1971, 1, 1, 0, 0, 5, 0, time.UTC),
+			Time:          time.Date(1971, 1, 1, 0, 0, 5, 0, time.UTC).Local(),
 			Level:         alert.Critical,
 			PreviousLevel: alert.Critical,
 			Duration:      4 * time.Second,
@@ -5272,7 +5272,7 @@ func TestServer_RecordReplayQuery_Missing(t *testing.T) {
 		{
 			ID:            "test-stream-query",
 			Message:       "test-stream-query is CRITICAL",
-			Time:          time.Date(1971, 1, 1, 0, 0, 6, 0, time.UTC),
+			Time:          time.Date(1971, 1, 1, 0, 0, 6, 0, time.UTC).Local(),
 			Level:         alert.Critical,
 			PreviousLevel: alert.Critical,
 			Duration:      5 * time.Second,
@@ -5296,7 +5296,7 @@ func TestServer_RecordReplayQuery_Missing(t *testing.T) {
 		{
 			ID:            "test-stream-query",
 			Message:       "test-stream-query is CRITICAL",
-			Time:          time.Date(1971, 1, 1, 0, 0, 7, 0, time.UTC),
+			Time:          time.Date(1971, 1, 1, 0, 0, 7, 0, time.UTC).Local(),
 			Level:         alert.Critical,
 			PreviousLevel: alert.Critical,
 			Duration:      6 * time.Second,
@@ -5320,7 +5320,7 @@ func TestServer_RecordReplayQuery_Missing(t *testing.T) {
 		{
 			ID:            "test-stream-query",
 			Message:       "test-stream-query is CRITICAL",
-			Time:          time.Date(1971, 1, 1, 0, 0, 8, 0, time.UTC),
+			Time:          time.Date(1971, 1, 1, 0, 0, 8, 0, time.UTC).Local(),
 			Level:         alert.Critical,
 			PreviousLevel: alert.Critical,
 			Duration:      7 * time.Second,
@@ -5344,7 +5344,7 @@ func TestServer_RecordReplayQuery_Missing(t *testing.T) {
 		{
 			ID:            "test-stream-query",
 			Message:       "test-stream-query is CRITICAL",
-			Time:          time.Date(1971, 1, 1, 0, 0, 9, 0, time.UTC),
+			Time:          time.Date(1971, 1, 1, 0, 0, 9, 0, time.UTC).Local(),
 			Level:         alert.Critical,
 			PreviousLevel: alert.Critical,
 			Duration:      8 * time.Second,
@@ -5368,7 +5368,7 @@ func TestServer_RecordReplayQuery_Missing(t *testing.T) {
 		{
 			ID:            "test-stream-query",
 			Message:       "test-stream-query is CRITICAL",
-			Time:          time.Date(1971, 1, 1, 0, 0, 10, 0, time.UTC),
+			Time:          time.Date(1971, 1, 1, 0, 0, 10, 0, time.UTC).Local(),
 			Level:         alert.Critical,
 			PreviousLevel: alert.Critical,
 			Duration:      9 * time.Second,
@@ -5391,7 +5391,7 @@ func TestServer_RecordReplayQuery_Missing(t *testing.T) {
 		{
 			ID:            "test-stream-query",
 			Message:       "test-stream-query is CRITICAL",
-			Time:          time.Date(1971, 1, 1, 0, 0, 11, 0, time.UTC),
+			Time:          time.Date(1971, 1, 1, 0, 0, 11, 0, time.UTC).Local(),
 			Level:         alert.Critical,
 			PreviousLevel: alert.Critical,
 			Duration:      10 * time.Second,
