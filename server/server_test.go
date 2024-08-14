@@ -4305,7 +4305,7 @@ func TestServer_ReplayBatch(t *testing.T) {
 		{
 			ID:      "test-batch",
 			Message: "test-batch got: 3",
-			Time:    time.Date(1971, 1, 1, 0, 0, 3, 0, time.UTC),
+			Time:    time.Date(1971, 1, 1, 0, 0, 3, 0, time.UTC).Local(),
 			Level:   "CRITICAL",
 			Data: query.Result{
 				Series: imodels.Rows{
@@ -4329,7 +4329,7 @@ func TestServer_ReplayBatch(t *testing.T) {
 		{
 			ID:      "test-batch",
 			Message: "test-batch got: 4",
-			Time:    time.Date(1971, 1, 1, 0, 0, 4, 0, time.UTC),
+			Time:    time.Date(1971, 1, 1, 0, 0, 4, 0, time.UTC).Local(),
 			Level:   "CRITICAL",
 			Data: query.Result{
 				Series: imodels.Rows{
