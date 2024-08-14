@@ -1586,7 +1586,7 @@ func TestBatch_AlertStateChangesOnly(t *testing.T) {
 			expAd := alert.Data{
 				ID:            "cpu_usage_idle:cpu=cpu-total",
 				Message:       "cpu_usage_idle:cpu=cpu-total is CRITICAL",
-				Time:          time.Date(1971, 1, 1, 0, 0, 0, 0, time.UTC),
+				Time:          time.Date(1971, 1, 1, 0, 0, 0, 0, time.UTC).Local(),
 				Level:         alert.Critical,
 				PreviousLevel: alert.OK,
 				Recoverable:   true,
@@ -1599,7 +1599,7 @@ func TestBatch_AlertStateChangesOnly(t *testing.T) {
 			expAd := alert.Data{
 				ID:            "cpu_usage_idle:cpu=cpu-total",
 				Message:       "cpu_usage_idle:cpu=cpu-total is OK",
-				Time:          time.Date(1971, 1, 1, 0, 0, 38, 0, time.UTC),
+				Time:          time.Date(1971, 1, 1, 0, 0, 38, 0, time.UTC).Local(),
 				Duration:      38 * time.Second,
 				Level:         alert.OK,
 				PreviousLevel: alert.Critical,
